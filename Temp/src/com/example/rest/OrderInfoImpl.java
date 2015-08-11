@@ -24,23 +24,16 @@ public class OrderInfoImpl implements OrderInfo {
 	}
 
 	@Override
-	public Order getOrder(int orderId) {
-		System.out.println("Inside the GetOrder..."+orderId+" "+list.get(0).getOrderId()+" "+list.get(1).getOrderId());
-		if (list.get(0).getOrderId() == orderId) {
-			return list.get(0);
-		} else if (list.get(1).getOrderId() == orderId) {
-			return list.get(1);
-		} else {
-			return null;
-		}
-	}
-
-	@Override
 	public OrderList getAllOrders() {
 		OrderList details = new OrderList();
 		for (Order order : list) {
 			details.getOrder().add(order);
 		}
 		return details;
+	}
+
+	@Override
+	public String getOrder(String cloud, String operation, String command) {
+		return cloud+" "+operation+" "+command;
 	}
 }

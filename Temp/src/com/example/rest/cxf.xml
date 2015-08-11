@@ -10,7 +10,7 @@
 			<bean class="com.example.rest.OrderInfoImpl" id="order"></bean>
 		</jaxrs:serviceBeans>
 		<jaxrs:extensionMappings>
-			<entry key="xml" value="application/xml">
+			<entry key="xml" value="application/text">
 			</entry>
 		</jaxrs:extensionMappings>
 	</jaxrs:server>
